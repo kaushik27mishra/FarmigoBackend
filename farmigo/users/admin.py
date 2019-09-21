@@ -5,16 +5,11 @@ from .forms import *
 
 class BaseUserAdmin(UserAdmin):
     add_form = BaseUserCreationForm
-    form = BaseUserChangeForm
     model = BaseUser
     list_display = ('user_type', 'username', 'email')
-    UserAdmin.add_fieldsets = (
+    UserAdmin.add_fieldsets += (
         (None, {
-            'fields': ('user_type', 'username', 'password', 'email')
-        }),
-    )
-    UserAdmin.fieldsets = (
-        (None, { 'fields': ('username', 'email')
+            'fields': ('user_type', 'name', 'email', 'mobnumber', 'state', 'district', 'address')
         }),
     )
 

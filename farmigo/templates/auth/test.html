@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    {% if user.is_authenticated %}
+        <title>{{user.user_type}}</title>
+    {% else %}
+        <title>Is Not Authenticated</title>
+    {% endif %}
 </head>
 <body>
     {% if messages %}

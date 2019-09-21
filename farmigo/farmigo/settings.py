@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'users.apps.UsersConfig',
+    'django_static_fontawesome',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -113,4 +115,6 @@ STATICFILES_DIRS = ['static']
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.BaseUser'
 
-LOGIN_REDIRECT_URL = 'home'
+LOGIN_REDIRECT_URL = 'edit_profile'
+LOGIN_URL = 'login'
+
