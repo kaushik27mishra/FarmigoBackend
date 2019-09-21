@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <br>
   <br>
-  <title>Farmigo Webiste</title>
+  <title>Farmigo</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -79,7 +79,11 @@
       <h1>Welcome to Farmigo</h1>
       <h2>An elegant website which can be a farmer's most useful tool!</h2>
       <img src="{%static 'msc/index/hero-img.png'%}" alt="Hero Imgs">
-      <a href="/login" class="btn-get-started scrollto">Login/Signup</a>
+      {%if user.is_authenticated%}
+        <a href="{%url 'profile'%}" class="btn-get-started scrollto">View Profile</a>
+      {%else%}
+        <a href="{%url 'login'%}" class="btn-get-started scrollto">Login/Signup</a>
+      {%endif%}
     </div>
   </section><!-- #hero -->
 

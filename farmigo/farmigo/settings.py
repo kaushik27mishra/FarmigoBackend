@@ -115,6 +115,6 @@ STATICFILES_DIRS = ['static']
 STATIC_URL = '/static/'
 AUTH_USER_MODEL = 'users.BaseUser'
 
-LOGIN_REDIRECT_URL = 'edit_profile'
+LOGIN_REDIRECT_URL = 'profile'
 LOGIN_URL = 'login'
 

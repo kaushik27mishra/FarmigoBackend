@@ -41,6 +41,10 @@ class CropCreationForm(forms.ModelForm):
     class Meta(forms.ModelForm):
         model = Crop
         fields = ['crop_name', 'crop_type']
+class CropUpdateForm(forms.ModelForm):
+    class Meta(forms.ModelForm):
+        model = Crop
+        fields = ['crop_name', 'crop_type']
 
 class FarmerProductCreationForm(UserCreationForm):
     class Meta(UserCreationForm):
@@ -51,12 +55,11 @@ class FarmerProductChangeForm(UserChangeForm):
         model = FarmerProduct
         fields = ['product_name', 'quality_index', 'product_type']
 
-
 #Retailer
 class RetailerUpdateForm(forms.ModelForm):
     class Meta(forms.ModelForm):
         model = Retailer
-        fields = []
+        fields = ['description']
 
 
 

@@ -28,5 +28,12 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
     path('profile/', users_views.profile, name='profile'),
     path('profile/edit/', users_views.edit_profile, name='edit_profile'),
+    path('retailer/', users_views.farmer_retailer, name='retailer'),
+    path('supplier/', users_views.farmer_supplier, name='supplier'),
+    path('weather/', users_views.weather, name='weather'),
+    path('livemandi/', users_views.mandi, name='mandi'),
+    path('soil_testing/', users_views.soil_testing, name='soil'),
+    path('blogs/1/', users_views.blog1, name='blog1'),
+    path('blogs/2/', users_views.blog2, name='blog2'),
     path('users/', include('users.urls')),
 ]
